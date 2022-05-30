@@ -1,0 +1,40 @@
+import {styled} from "@mui/material";
+
+export const Button = styled('button')({
+    left: '800px',
+    top: '50px',
+    position: 'relative',
+    transition: 'box-shadow 300ms ease-in-out, color 300ms ease-in-out',
+    width: '120px',
+    boxSizing: 'border-box',
+    appearance: 'none',
+    backgroundColor: '#b0c2cc',
+    border: '2px solid #93a1a1',
+    borderRadius: '0.25rem',
+    color: '#5e6c7c',
+    cursor: 'pointer',
+    fontSize: '1rem',
+    lineHeight: '1',
+    padding: '0.6em 0',
+    textTransform: 'uppercase',
+    fontWeight: '700',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    '&:hover': {
+        boxShadow: '0 0 40px 40px #539ed1 inset',
+        color: '#4b5065',
+        outline: '0',
+    },
+    '&:focus': {
+        outline: '0'
+    },
+    '&:disabled': {
+    transition: 'none',
+    boxShadow: 'none',
+    color: '#3d3b3b',
+    opacity: '.5',
+    cursor: 'auto'
+}
+
+})
