@@ -1,14 +1,18 @@
 import React from 'react';
 import './App.css';
 import {Message} from "./components/Message";
-import {AppContainer} from "./styles";
 import {JokeButton} from "./components/JokeButton";
+import {ChuckImage} from "./components/ChuckImage";
+import {AppContainer, ContentContainer} from "./styles";
 
 function App() {
   return (
       <AppContainer>
-          <Message />
-          <JokeButton />
+          <ContentContainer>
+              <Message />
+              <JokeButton />
+          </ContentContainer>
+          <ChuckImage />
       </AppContainer>
   );
 }

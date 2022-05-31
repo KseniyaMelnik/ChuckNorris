@@ -6,8 +6,6 @@ export const DisplayContainer = styled('div')({
     padding: '10px 20px',
     borderRadius: '10px 10px 0px 10px',
     position: 'relative',
-    left: '800px',
-    top: '20px',
     '&:before': {
         right: '-7px',
         width: '20px',
@@ -21,7 +19,7 @@ export const DisplayContainer = styled('div')({
     '&:after': {
         right: '-26px',
         width: '26px',
-        backgroundColor: 'white',
+        backgroundColor: '#c4c0be',
         borderBottomLeftRadius:'15px',
         content: '""',
         position: 'absolute',

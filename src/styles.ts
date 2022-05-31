@@ -1,12 +1,18 @@
 import {styled} from "@mui/material";
-import Chuck from "./assets/chuck_norris.png"
 
 export const AppContainer = styled('div')({
-       width: '100%',
+       display: 'flex',
+       justifyContent: 'center',
+       paddingTop: '100px',
+       width: '95%',
        height: '100vh',
-       backgroundImage: `url(${Chuck})`,
-       backgroundRepeat: 'no-repeat',
-       backgroundPositionX: 'right',
-       backgroundSize: 'contain'
+       margin: '0 auto',
+       boxSizing: 'border-box',
+})
 
+export const ContentContainer = styled('div')({
+       display: 'flex',
+       flexDirection: 'column',
+       gap: '20px',
+       paddingTop: '50px'
 })

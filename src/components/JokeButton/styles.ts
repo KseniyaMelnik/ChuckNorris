@@ -1,9 +1,6 @@
 import {styled} from "@mui/material";
 
 export const Button = styled('button')({
-    left: '800px',
-    top: '50px',
-    position: 'relative',
     transition: 'box-shadow 300ms ease-in-out, color 300ms ease-in-out',
     width: '120px',
     boxSizing: 'border-box',

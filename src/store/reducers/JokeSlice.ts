@@ -13,7 +13,7 @@ const initialState: JokesState = {
             "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
             "id": "ZqTlF-iQQ0SETmUOEfaYtw",
             "url": "https://api.chucknorris.io/jokes/ZqTlF-iQQ0SETmUOEfaYtw",
-            "value": "the last person to survive a roundhouse kick by Chuck Norris was michael jackson. then he turned white"
+            "value": "the last person to survive a roundhouse kick by ChuckImage Norris was michael jackson. then he turned white"
         }
     ],
     isLoading: false,
