@@ -14,5 +14,14 @@ export const ContentContainer = styled('div')({
        display: 'flex',
        flexDirection: 'column',
        gap: '20px',
-       paddingTop: '50px'
+       paddingTop: '50px',
+       justifyContent: 'space-between',
+       height: '500px'
+})
+
+export const Controls = styled('div')({
+       display: 'flex',
+       flexDirection: 'column',
+       gap: '10px',
+       paddingBottom: '50px'
 })
