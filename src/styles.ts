@@ -16,7 +16,8 @@ export const ContentContainer = styled('div')({
        gap: '20px',
        paddingTop: '50px',
        justifyContent: 'space-between',
-       height: '500px'
+       height: '500px',
+       minWidth: '400px'
 })
 
 export const Controls = styled('div')({

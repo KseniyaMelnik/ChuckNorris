@@ -3,6 +3,7 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 interface JokesState {
     jokes: IJoke[];
+    favoriteJokes: IJoke[];
     isLoading: boolean;
     error: string;
 }
@@ -10,12 +11,13 @@ interface JokesState {
 const initialState: JokesState = {
     jokes: [
         {
-            "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
-            "id": "ZqTlF-iQQ0SETmUOEfaYtw",
-            "url": "https://api.chucknorris.io/jokes/ZqTlF-iQQ0SETmUOEfaYtw",
-            "value": "the last person to survive a roundhouse kick by ChuckImage Norris was michael jackson. then he turned white"
+            icon_url: "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+            id: "ZqTlF-iQQ0SETmUOEfaYtw",
+            url: "https://api.chucknorris.io/jokes/ZqTlF-iQQ0SETmUOEfaYtw",
+            value: "the last person to survive a roundhouse kick by ChuckImage Norris was michael jackson. then he turned white"
         }
     ],
+    favoriteJokes: [],
     isLoading: false,
     error: ''
 }
@@ -36,6 +38,9 @@ export const jokeSlice = createSlice({
             state.isLoading = false;
             state.error = action.payload
         },
+        setFavoriteJoke(state, action: PayloadAction<IJoke>) {
+            state.favoriteJokes.unshift(action.payload)
+        }
     }
 })
 
