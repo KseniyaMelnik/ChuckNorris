@@ -1,6 +1,7 @@
 import React from 'react';
-import {DisplayContainer, FistButton} from "./styles";
+import {DisplayContainer} from "./styles";
 import {useAppSelector} from "../../hooks/redux";
+import {FistButton} from "../FistButton";
 
 export const Message = () => {
     const {jokes} = useAppSelector(state=> state.jokeReducer)
@@ -9,7 +10,7 @@ export const Message = () => {
             <div>
                 {jokes[0].value}
             </div>
-            <FistButton/>
+            <FistButton />
         </DisplayContainer>
     )
 

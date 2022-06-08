@@ -7,8 +7,10 @@ import {AppContainer, ContentContainer, Controls} from "./styles";
 import {ShowJokesButton} from "./components/Buttons/ShowingJokes";
 import {JokeListButton} from "./components/Buttons/JokeListButton";
 import {Modal} from "./components/Modal";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function App() {
+    const matches = useMediaQuery('(max-width:768px)');
     const [modalActive, setModalActive] = useState(false)
   return (
       <AppContainer>
@@ -20,7 +22,7 @@ function App() {
                   <JokeListButton openModal={setModalActive} />
               </Controls>
           </ContentContainer>
-          <ChuckImage />
+          {!matches && <ChuckImage />}
           <Modal setActive={setModalActive} active={modalActive}/>
       </AppContainer>
   );

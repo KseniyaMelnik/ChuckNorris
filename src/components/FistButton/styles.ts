@@ -10,9 +10,6 @@ export const FistContainer = styled(Fist)({
     transition: '0.3s easy-in-out',
     '&:hover': {
         transition: '0.3s easy-in-out',
-        '& g': {
-            fill: 'brown'
-        }
     },
     '&:active': {
         transform: 'scale(0.8)',
