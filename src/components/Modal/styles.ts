@@ -8,12 +8,13 @@ export const ModalContainer = styled('div')({
     left: '0',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
 })
 
 export const ModalContent = styled('div')({
     height: '200px',
     width: '400px',
     backgroundColor: 'white',
-    borderRadius: '12px'
+    borderRadius: '12px',
+    overflow: 'hidden'
 })

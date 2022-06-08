@@ -39,7 +39,11 @@ export const jokeSlice = createSlice({
             state.error = action.payload
         },
         addFavoriteJoke(state, action: PayloadAction<IJoke>) {
-            state.favoriteJokes.unshift(action.payload)
+            state.favoriteJokes.push(action.payload)
+            if (state.favoriteJokes.length > 10) {
+                state.favoriteJokes.splice(0, 1)
+            }
+
         },
         removeFavoriteJoke(state, action: PayloadAction<IJoke>) {
             const index = state.favoriteJokes.findIndex(j => j.id === action.payload.id);
