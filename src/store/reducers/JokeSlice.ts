@@ -51,6 +51,9 @@ export const jokeSlice = createSlice({
                 state.favoriteJokes.splice(index, 1);
             }
         },
+        favoriteJokesFetching(state, action: PayloadAction<IJoke[]> ){
+            state.favoriteJokes = action.payload
+        },
         resetFavoriteJokes (state) {
             state.favoriteJokes = []
         }

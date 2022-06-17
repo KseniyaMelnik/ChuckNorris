@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import {ModalContainer, ModalContent} from "./styles";
+import {Joke} from "./../Joke"
 import {jokeSlice} from "../../store/reducers/JokeSlice";
-import {IJoke} from "../../models/IJoke"
 
 
 
@@ -11,25 +11,23 @@ type ModalProps = {
     setActive: (active: boolean) => void
 }
 
-type JokeProps = {
-    joke: IJoke
-}
 
-const Joke = ({joke}: JokeProps) => {
-    const dispatch = useAppDispatch()
-    const handleClick = () => {
-        dispatch(jokeSlice.actions.removeFavoriteJoke(joke))
-    }
-
-   
-    return <div>
-        <div> {joke.value} </div> 
-        <button onClick={handleClick}> X </button>
-    </div>
-}
 
 export const Modal = ({active, setActive}: ModalProps) => {
     const {favoriteJokes} = useAppSelector(state => state.jokeReducer)
+    const dispatch = useAppDispatch()
+
+
+    useEffect(()=>{
+        let jokes = localStorage.getItem("favoriteJokes")
+        if (jokes) {
+            let newJokes = JSON.parse(jokes)
+            dispatch(jokeSlice.actions.favoriteJokesFetching(newJokes))
+        }
+    },[])
+    useEffect(()=>{
+        localStorage.setItem("favoriteJokes", JSON.stringify(favoriteJokes));
+    },[favoriteJokes])
     
     return (
         <ModalContainer style={active ? {display: 'flex'} : {display: 'none'}}
