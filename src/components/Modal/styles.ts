@@ -12,9 +12,10 @@ export const ModalContainer = styled('div')({
 })
 
 export const ModalContent = styled('div')({
-    height: '200px',
+    minHeight: '200px',
     width: '400px',
     backgroundColor: 'white',
     borderRadius: '12px',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    padding: '20px'
 })
