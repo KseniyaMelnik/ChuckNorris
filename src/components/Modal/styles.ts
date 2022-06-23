@@ -13,6 +13,7 @@ export const ModalContainer = styled('div')({
 
 export const ModalContent = styled('div')({
     minHeight: '200px',
+    maxHeight: '600px',
     width: '400px',
     backgroundColor: 'white',
     borderRadius: '12px',

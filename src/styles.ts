@@ -3,7 +3,7 @@ import {styled} from "@mui/material";
 export const AppContainer = styled('div')({
        display: 'flex',
        justifyContent: 'center',
-       paddingTop: '100px',
+       padding: '50px 0',
        width: '95%',
        height: '100vh',
        margin: '0 auto',

@@ -23,7 +23,7 @@ export const DisplayContainer = styled('div')({
     '&:after': {
         right: '-26px',
         width: '26px',
-        backgroundColor: '#c4c0be',
+        backgroundColor: '#FFFFFF',
         borderBottomLeftRadius:'15px',
         content: '""',
         position: 'absolute',

@@ -1,14 +1,14 @@
 import {styled} from "@mui/material";
 
-export const Button = styled('button')({
+export const Button = styled('button')(({ theme }) => ({
     transition: 'box-shadow 300ms ease-in-out, color 300ms ease-in-out',
     width: '120px',
     boxSizing: 'border-box',
     appearance: 'none',
-    backgroundColor: '#b0c2cc',
+    backgroundColor: theme.palette.primary.main,
     border: '2px solid #93a1a1',
     borderRadius: '0.25rem',
-    color: '#5e6c7c',
+    color: theme.palette.primary.contrastText,
     cursor: 'pointer',
     fontSize: '1rem',
     lineHeight: '1',
@@ -34,4 +34,4 @@ export const Button = styled('button')({
     cursor: 'auto'
 }
 
-})
+}))

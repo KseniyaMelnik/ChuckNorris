@@ -5,6 +5,21 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux";
 import {setupStore} from "./store/store";
+import CssBaseline from "@mui/material/CssBaseline";
+import { createTheme, ThemeProvider } from "@mui/material";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#b0c2cc",
+      dark: "#93a5b2",
+      contrastText: "#5e6c7c",
+    },
+    secondary: {
+      main: "#FFFFFF",
+    },
+  }
+});
 
 const store = setupStore()
 
@@ -12,9 +27,12 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
+  <ThemeProvider theme={theme}>
   <Provider store={store}>
+    <CssBaseline />
     <App />
   </Provider>
+  </ThemeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
