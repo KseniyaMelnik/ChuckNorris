@@ -17,7 +17,7 @@ export const ModalContent = styled('div')({
     width: '400px',
     backgroundColor: 'white',
     borderRadius: '12px',
-    overflow: 'hidden',
+    overflow: 'scroll',
     padding: '20px',
     display: 'flex',
     flexDirection: 'column',
