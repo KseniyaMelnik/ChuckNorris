@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import { ChuckImage } from '../ChuckImage';
 import {PosterContainer} from './styles';
-import {Layer} from "react-konva";
+import {Layer, Rect} from "react-konva";
 import { DraggableText } from '../DraggableText';
 import { useAppSelector } from '../../hooks/redux';
 import { downloadURI } from '../../utils';
@@ -16,7 +16,7 @@ export const Poster = ({isExport, setExport}: PosterProps) => {
 
   const handleExport = () => {
     const uri = stageRef.current.toDataURL();
-    downloadURI(uri, 'poster.png');
+    downloadURI(uri, 'poster.jpg');
   };
 
   if (isExport) {
@@ -26,8 +26,13 @@ export const Poster = ({isExport, setExport}: PosterProps) => {
   
   return (
     <>
-    <PosterContainer width={600} height={window.innerHeight} ref={stageRef} >
+    <PosterContainer 
+    width={600} 
+    height={window.innerHeight} 
+    ref={stageRef} 
+    >
       <Layer>
+        <Rect width={600} height={window.innerHeight} fill="#e6eaec" />
         <ChuckImage />
         {selectedJokes.map(({id, value})=> <DraggableText key={id} text={value}/>)}
       </Layer>
