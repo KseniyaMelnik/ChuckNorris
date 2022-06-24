@@ -9,6 +9,7 @@ import {Save} from "./components/Buttons/Save";
 import {Modal} from "./components/Modal";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Poster } from './components/Poster';
+import { Clear } from './components/Buttons/Clear';
 
 const App = () => {
     const matches = useMediaQuery('(max-width:768px)');
@@ -24,6 +25,7 @@ const App = () => {
                   <ShowJokesButton />
                   <JokeListButton openModal={setModalActive} />
                   <Save setExport={setExport}/>
+                  <Clear />
               </Controls>
           </ContentContainer>
           {!matches && <Poster isExport={isExport} setExport={setExport}/>}
